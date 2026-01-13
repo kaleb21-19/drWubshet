@@ -1,6 +1,10 @@
 @import "tailwindcss";
 
 :root {
+  --color-primary: #0f52ba;    /* Deep Royal Blue (Trust) */
+  --color-secondary: #0d9488;  /* Teal (Healing) */
+  --color-accent: #e0f2fe;     /* Light Sky Blue (Soft backgrounds) */
+  --color-dark: #1e293b;       /* Slate (Professional text) */
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -10,6 +14,46 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+}
+
+.primary {
+  color: var(--color-primary);
+}
+
+.secondary {
+  color: var(--color-secondary);
+}
+
+.accent {
+  background-color: var(--color-accent);
+}
+
+.dark {
+  color: var(--color-dark);
+}
+
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.bg-secondary {
+  background-color: var(--color-secondary);
+}
+
+.bg-dark {
+  background-color: var(--color-dark);
+}
+
+.text-primary {
+  color: var(--color-primary);
+}
+
+.text-secondary {
+  color: var(--color-secondary);
+}
+
+.text-dark {
+  color: var(--color-dark);
 }
 
 @media (prefers-color-scheme: dark) {
