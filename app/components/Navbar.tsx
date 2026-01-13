@@ -17,12 +17,12 @@ export default function Navbar() {
                 
                 <div className="flex gap-8 items-center">
                     {[
-                        { name: "Home", path: "/" },
-                        { name: "About", path: "/about" },
-                        { name: "Services", path: "/services" },
-                        { name: "Experience", path: "/experience" },
-                        { name: "Contact", path: "/contact" },
-                        { name: "Pra", path: "/pra" },
+                        { name: "Home", path: "#hero" },
+                        { name: "About", path: "#about" },
+                        { name: "Services", path: "#services" },
+                        { name: "Experience", path: "#experience" },
+                        { name: "Contact", path: "#contact" },
+                        { name: "Pra", path: "#pra" },
                     ].map((link) => (
                         <Link key={link.path} href={link.path}>
                             <motion.span 

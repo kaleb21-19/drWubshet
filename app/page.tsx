@@ -8,11 +8,14 @@ import Experience from "./experience/page";
 export default function Home() {
   return (
    <>
-   <Hero />
-   <Services />
-  <Experience />
-   <About />
-   <Contact />
+   <div className="scroll-smooth">
+  <div id="hero" className=""><Hero /></div>
+   <div id="services" className=""><Services /></div>
+   <div id="experience" className=""><Experience /></div>
+   <div id="about" className=""><About /></div>
+   <div id="contact" className=""><Contact /></div>
+   </div>
+ 
    </>
   );
 }
