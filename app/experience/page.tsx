@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import { FlaskConical } from "lucide-react";
 
 const experience = [
   {
@@ -57,7 +58,7 @@ export default function Experience() {
                 className="relative pl-12 md:pl-20 group"
               >
                 <div className="absolute left-0 md:left-4 top-2 w-8 h-8 rounded-full bg-white border-2 border-primary/30 group-hover:border-primary group-hover:bg-primary/5 transition-all duration-300 flex items-center justify-center shadow-sm">
-                  <div className="w-2.5 h-2.5 rounded-full bg-primary" />
+                  <FlaskConical className="w-4 h-4 text-primary" />
                 </div>
 
                 <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md hover:border-primary/20 transition-all duration-300">

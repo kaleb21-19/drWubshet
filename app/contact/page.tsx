@@ -1,10 +1,14 @@
 "use client";
 import { motion } from "framer-motion";
+import { MapPin, Mail, Building2, Send } from "lucide-react";
+import { useState, FormEvent } from "react";
+
+const EMAIL = "info@drwubshet.com";
 
 const contactInfo = [
-  { icon: "📍", label: "Location", value: "Addis Ababa, Ethiopia" },
-  { icon: "✉️", label: "Email", value: "info@drwubshet.com" },
-  { icon: "🏥", label: "Specialization", value: "Diagnostic Pathology" }
+  { icon: MapPin, label: "Location", value: "Addis Ababa, Ethiopia" },
+  { icon: Mail, label: "Email", value: EMAIL },
+  { icon: Building2, label: "Specialization", value: "Diagnostic Pathology" }
 ];
 
 const services = [
@@ -15,6 +19,27 @@ const services = [
 ];
 
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: ""
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    
+    const mailtoLink = `mailto:${EMAIL}?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+    )}`;
+    
+    window.location.href = mailtoLink;
+  };
+
   return (
     <section className="py-24 bg-white">
       <div className="max-w-5xl mx-auto px-6">
@@ -54,7 +79,7 @@ export default function Contact() {
                   className="flex items-center gap-4 p-4 bg-gray-50 rounded-xl border border-gray-100 hover:border-primary/20 transition-colors"
                 >
                   <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center shrink-0">
-                    <span className="text-xl">{item.icon}</span>
+                    <item.icon className="w-5 h-5 text-primary" />
                   </div>
                   <div>
                     <p className="text-sm text-gray-500">{item.label}</p>
@@ -86,12 +111,16 @@ export default function Contact() {
           >
             <h3 className="text-xl font-bold text-gray-900 mb-6">Send a Message</h3>
             
-            <form className="space-y-5">
+            <form onSubmit={handleSubmit} className="space-y-5">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1.5">Name</label>
                   <input 
-                    type="text" 
+                    type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
                     className="w-full px-4 py-2.5 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all"
                     placeholder="Your name"
                   />
@@ -99,7 +128,11 @@ export default function Contact() {
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1.5">Email</label>
                   <input 
-                    type="email" 
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
                     className="w-full px-4 py-2.5 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all"
                     placeholder="your@email.com"
                   />
@@ -109,7 +142,11 @@ export default function Contact() {
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1.5">Subject</label>
                 <input 
-                  type="text" 
+                  type="text"
+                  name="subject"
+                  value={formData.subject}
+                  onChange={handleChange}
+                  required
                   className="w-full px-4 py-2.5 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all"
                   placeholder="Consultation inquiry"
                 />
@@ -118,16 +155,25 @@ export default function Contact() {
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1.5">Message</label>
                 <textarea 
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
                   rows={4}
+                  required
                   className="w-full px-4 py-2.5 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all resize-none"
                   placeholder="Describe your inquiry..."
                 ></textarea>
               </div>
+
+              <p className="text-xs text-gray-500 text-center">
+                This will open your email client to send the message.
+              </p>
               
               <button 
                 type="submit"
-                className="w-full bg-primary text-white py-3 rounded-xl hover:bg-primary/90 transition-colors font-medium shadow-sm hover:shadow-md"
+                className="w-full bg-primary text-white py-3 rounded-xl hover:bg-primary/90 transition-colors font-medium shadow-sm hover:shadow-md flex items-center justify-center gap-2"
               >
+                <Send className="w-5 h-5" />
                 Send Message
               </button>
             </form>

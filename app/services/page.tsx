@@ -1,22 +1,23 @@
 "use client";
 
 import { motion, type Variants } from "framer-motion";
+import { Microscope, Dna, BarChart3 } from "lucide-react";
 
 const pathologyServices = [
   { 
     title: "Surgical Pathology", 
     desc: "Definitive diagnosis of tissue specimens through expert microscopic analysis.",
-    icon: "🔬" 
+    icon: Microscope 
   },
   { 
     title: "Cytopathology", 
     desc: "Evaluation of individual cell characteristics for cancer screening and prevention.",
-    icon: "🧬" 
+    icon: Dna 
   },
   { 
     title: "Clinical Consultation", 
     desc: "Partnering with clinical teams to interpret complex laboratory results.",
-    icon: "📊" 
+    icon: BarChart3 
   }
 ];
 
@@ -74,8 +75,8 @@ export default function Services() {
                 transition={{ type: "spring", stiffness: 280, damping: 20 }}
                 className="bg-gray-50 p-8 rounded-2xl border border-gray-100 hover:bg-white hover:shadow-lg hover:border-primary/20 transition-colors duration-300 group"
               >
-                <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center text-2xl mb-5 group-hover:bg-primary group-hover:scale-105 transition-all duration-300">
-                  <span className="group-hover:brightness-200">{service.icon}</span>
+                <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary group-hover:scale-105 transition-all duration-300">
+                  <service.icon className="w-7 h-7 text-primary group-hover:text-white transition-colors" />
                 </div>
 
                 <h3 className="text-xl font-bold text-gray-900 mb-2">

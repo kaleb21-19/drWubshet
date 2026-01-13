@@ -1,6 +1,5 @@
 "use client";
 import { Variants, motion } from "framer-motion";
-import Link from "next/link";
 import { FiDownload, FiLinkedin, FiFacebook, FiTwitter, FiInstagram } from "react-icons/fi";
 import { FaTiktok } from "react-icons/fa";
 
