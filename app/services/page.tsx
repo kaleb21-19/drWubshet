@@ -39,7 +39,7 @@ const cardVariants = (direction: "left" | "right"): Variants => ({
 
 export default function Services() {
   return (
-    <section className="py-24 bg-white">
+    <section className="py-16 md:py-24 bg-white">
       <div className="max-w-6xl mx-auto px-6">
 
         {/* Section Header */}
@@ -48,7 +48,7 @@ export default function Services() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5, ease: "easeOut" }}
-          className="mb-16 text-center md:text-left"
+          className="mb-10 md:mb-16 text-center"
         >
           <p className="text-primary font-medium uppercase tracking-wide text-sm mb-2">
             Expertise
@@ -56,11 +56,11 @@ export default function Services() {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
             Diagnostic Services
           </h2>
-          <div className="h-1 w-16 bg-primary mt-4 mx-auto md:mx-0 rounded-full" />
+          <div className="h-1 w-16 bg-primary mt-4 mx-auto rounded-full" />
         </motion.div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
           {pathologyServices.map((service, index) => {
             const direction = index % 2 === 0 ? "left" : "right";
 
@@ -73,9 +73,9 @@ export default function Services() {
                 variants={cardVariants(direction)}
                 whileHover={{ y: -6 }}
                 transition={{ type: "spring", stiffness: 280, damping: 20 }}
-                className="bg-gray-50 p-8 rounded-2xl border border-gray-100 hover:bg-white hover:shadow-lg hover:border-primary/20 transition-colors duration-300 group"
+                className="bg-gray-50 p-6 md:p-8 rounded-2xl border border-gray-100 hover:bg-white hover:shadow-lg hover:border-primary/20 transition-colors duration-300 group text-center md:text-left"
               >
-                <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary group-hover:scale-105 transition-all duration-300">
+                <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-4 md:mb-5 group-hover:bg-primary group-hover:scale-105 transition-all duration-300 mx-auto md:mx-0">
                   <service.icon className="w-7 h-7 text-primary group-hover:text-white transition-colors" />
                 </div>
 

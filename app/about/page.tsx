@@ -10,7 +10,7 @@ const highlights = [
 
 export default function About() {
   return (
-    <section className="py-24 bg-white">
+    <section className="py-16 md:py-24 bg-white">
       <div className="max-w-5xl mx-auto px-6">
         
         <motion.div 
@@ -18,7 +18,7 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="mb-12 text-center"
+          className="mb-8 md:mb-12 text-center"
         >
           <p className="text-primary font-medium uppercase tracking-wide text-sm mb-2">
             About
@@ -29,7 +29,7 @@ export default function About() {
           <div className="h-1 w-16 bg-primary mt-4 mx-auto rounded-full" />
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 md:gap-12 items-start">
           
           <motion.div 
             initial={{ opacity: 0, x: -20 }}
@@ -38,8 +38,8 @@ export default function About() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="lg:col-span-3 space-y-6"
           >
-            <div className="space-y-4 text-gray-600 leading-relaxed">
-              <p className="text-lg">
+            <div className="space-y-4 text-gray-600 leading-relaxed text-center lg:text-left">
+              <p className="text-base md:text-lg">
                 Dr. Wubshet Assefa is a dedicated Specialist Pathologist with extensive experience 
                 in diagnostic pathology and laboratory medicine. Based in Addis Ababa, Ethiopia, 
                 Dr. Assefa is committed to providing accurate and timely diagnostic services.
@@ -66,7 +66,7 @@ export default function About() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="lg:col-span-2"
           >
-            <div className="bg-gray-50 rounded-2xl p-6 border border-gray-100">
+            <div className="bg-gray-50 rounded-2xl p-5 md:p-6 border border-gray-100">
               <h3 className="font-bold text-gray-900 mb-4">Quick Facts</h3>
               <div className="space-y-4">
                 {highlights.map((item, index) => (
