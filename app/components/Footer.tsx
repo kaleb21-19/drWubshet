@@ -1,14 +1,14 @@
 "use client";
 import Link from "next/link";
-import { FiLinkedin, FiFacebook, FiTwitter, FiInstagram } from "react-icons/fi";
-import { FaTiktok } from "react-icons/fa";
+import { FiFacebook, FiTwitter, FiInstagram } from "react-icons/fi";
 import { MapPin, Mail } from "lucide-react";
 
 const navLinks = [
   { name: "Home", path: "#hero" },
-  { name: "About", path: "#about" },
   { name: "Services", path: "#services" },
   { name: "Experience", path: "#experience" },
+  { name: "Publications", path: "#publications" },
+  { name: "About", path: "#about" },
   { name: "Contact", path: "#contact" },
 ];
 
@@ -27,11 +27,9 @@ export default function Footer() {
             
             <div className="flex items-center gap-3">
               {[
-                { icon: FiLinkedin, href: "#", label: "LinkedIn" },
-                { icon: FiFacebook, href: "#", label: "Facebook" },
-                { icon: FiTwitter, href: "#", label: "Twitter" },
-                { icon: FiInstagram, href: "#", label: "Instagram" },
-                { icon: FaTiktok, href: "#", label: "TikTok" },
+                { icon: FiFacebook, href: "https://www.facebook.com/wubshet.assefa.3", label: "Facebook" },
+                { icon: FiTwitter, href: "https://twitter.com/WubshetAssefa", label: "Twitter" },
+                { icon: FiInstagram, href: "https://instagram.com/WubshetAssefa", label: "Instagram" },
               ].map((social) => (
                 <a
                   key={social.label}
@@ -68,11 +66,11 @@ export default function Footer() {
             <div className="text-gray-400 text-sm space-y-4 md:space-y-3">
               <div className="flex items-center gap-3 justify-center md:justify-start">
                 <MapPin className="w-4 h-4 text-primary" />
-                <span>Addis Ababa, Ethiopia</span>
+                <span>Bahir Dar, Ethiopia</span>
               </div>
               <div className="flex items-center gap-3 justify-center md:justify-start">
                 <Mail className="w-4 h-4 text-primary" />
-                <span>info@drwubshet.com</span>
+                <span>wubossassefa@yahoo.com</span>
               </div>
             </div>
           </div>

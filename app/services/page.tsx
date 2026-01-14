@@ -1,23 +1,33 @@
 "use client";
 
 import { motion, type Variants } from "framer-motion";
-import { Microscope, Dna, BarChart3 } from "lucide-react";
+import { Microscope, Dna, FlaskConical, Stethoscope, FileSearch } from "lucide-react";
 
 const pathologyServices = [
   { 
-    title: "Surgical Pathology", 
-    desc: "Definitive diagnosis of tissue specimens through expert microscopic analysis.",
+    title: "Histopathology", 
+    desc: "Gross and microscopic examination of biopsy and surgical specimens, with focused experience in gynecologic pathology and oncopathology.",
     icon: Microscope 
   },
   { 
     title: "Cytopathology", 
-    desc: "Evaluation of individual cell characteristics for cancer screening and prevention.",
+    desc: "Fine needle aspiration cytology (FNAC) procedures and interpretation of cytology specimens, including effusion cytology.",
     icon: Dna 
   },
   { 
-    title: "Clinical Consultation", 
-    desc: "Partnering with clinical teams to interpret complex laboratory results.",
-    icon: BarChart3 
+    title: "Hematopathology", 
+    desc: "Interpretation of peripheral blood films, bone marrow aspirates, and trephine biopsies.",
+    icon: FlaskConical 
+  },
+  { 
+    title: "Autopsy Pathology", 
+    desc: "Autopsy pathology services including specimen grossing and histologic tissue evaluation.",
+    icon: Stethoscope 
+  },
+  { 
+    title: "Consultative Review", 
+    desc: "Consultative review of pathology cases and provision of second-opinion diagnostic interpretation.",
+    icon: FileSearch 
   }
 ];
 
@@ -60,7 +70,7 @@ export default function Services() {
         </motion.div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
           {pathologyServices.map((service, index) => {
             const direction = index % 2 === 0 ? "left" : "right";
 

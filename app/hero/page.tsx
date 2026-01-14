@@ -1,40 +1,40 @@
 "use client";
 import { Variants, motion } from "framer-motion";
-import { FiDownload, FiLinkedin, FiFacebook, FiTwitter, FiInstagram } from "react-icons/fi";
-import { FaTiktok } from "react-icons/fa";
+import { FiDownload, FiFacebook, FiTwitter, FiInstagram } from "react-icons/fi";
 
 const skills = [
   {
     title: "Years of Experience",
     subtitle: "10+",
-    description: "Over a decade of professional experience in clinical and diagnostic pathology"
+    description: "More than ten years of professional practice in anatomic and clinical pathology"
   },
   {
-    title: "Pathology Specialization",
-    subtitle: "Expert",
-    description: "Specialist in anatomical, clinical, and laboratory pathology diagnostics"
+    title: "Academic Appointment",
+    subtitle: "Faculty",
+    description: "Assistant Professor of Pathology at Bahir Dar University"
   },
   {
-    title: "Accurate Diagnosis",
-    subtitle: "Trusted",
-    description: "Highly precise diagnostic evaluations supporting effective patient treatment"
+    title: "Clinical Role",
+    subtitle: "Chief",
+    description: "Chief Anatomic Pathologist with responsibility for diagnostic services and quality assurance"
   },
   {
-    title: "Laboratory Expertise",
-    subtitle: "Advanced",
-    description: "Extensive hands-on experience with modern laboratory techniques and equipment"
+    title: "Subspecialty Focus",
+    subtitle: "Gynecologic",
+    description: "Focused diagnostic expertise in gynecologic pathology and oncopathology"
   },
   {
-    title: "Patient-Centered Care",
-    subtitle: "Dedicated",
-    description: "Committed to ethical practice and high-quality patient care standards"
+    title: "International Fellowship",
+    subtitle: "CAP",
+    description: "College of American Pathologists International Fellowship awardee"
   },
   {
-    title: "Professional Recognition",
-    subtitle: "Certified",
-    description: "Licensed and recognized pathology specialist with continuous medical education"
+    title: "Scholarly Output",
+    subtitle: "Publications",
+    description: "Author of peer-reviewed scientific articles in pathology and laboratory medicine"
   }
 ];
+
 
 export default function Hero() {
 const containerVariants = {
@@ -111,7 +111,8 @@ const skillVariants = (direction: "left" | "right"): Variants => ({
           >
             <motion.div variants={itemVariants}>
               <p className="text-primary font-medium tracking-wide uppercase text-sm mb-2">
-                Specialist Pathologist
+               Anatomic Pathologist, M.D.
+
               </p>
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-gray-900">
                 Dr. Wubshet
@@ -124,7 +125,10 @@ const skillVariants = (direction: "left" | "right"): Variants => ({
               variants={itemVariants} 
               className="text-gray-600 text-lg md:text-xl max-w-lg mx-auto lg:mx-0 leading-relaxed"
             >
-              Dedicated to diagnostic excellence and precision medicine with over a decade of clinical expertise.
+              Assistant Professor and Chief Anatomic Pathologist at Bahir Dar University,
+with international fellowship training and specialized expertise in
+gynecologic pathology and oncopathology.
+
             </motion.p>
 
             {/* CALL TO ACTION */}
@@ -133,8 +137,8 @@ const skillVariants = (direction: "left" | "right"): Variants => ({
               className="flex flex-col sm:flex-row items-center gap-4 pt-2"
             >
               <motion.a
-                href="/Kaleb Tegegn CV.pdf"
-                download="Kaleb Tegegn CV.pdf"
+                href="public/CV wube path 2016(1) (1).docx"
+                download="CV wube path 2016(1) (1).docx"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-full font-medium hover:bg-primary/90 transition-colors shadow-sm hover:shadow-md"
@@ -145,11 +149,9 @@ const skillVariants = (direction: "left" | "right"): Variants => ({
 
               <div className="flex items-center gap-3">
                 {[
-                  { icon: FiLinkedin, href: "#", label: "LinkedIn" },
-                  { icon: FiFacebook, href: "#", label: "Facebook" },
-                  { icon: FiTwitter, href: "#", label: "Twitter" },
-                  { icon: FiInstagram, href: "#", label: "Instagram" },
-                  { icon: FaTiktok, href: "#", label: "TikTok" },
+                  { icon: FiFacebook, href: "https://www.facebook.com/wubshet.assefa.3", label: "Facebook" },
+                  { icon: FiTwitter, href: "https://twitter.com/WubshetAssefa", label: "Twitter" },
+                  { icon: FiInstagram, href: "https://instagram.com/WubshetAssefa", label: "Instagram" },
                 ].map((social) => (
                   <motion.a
                     key={social.label}

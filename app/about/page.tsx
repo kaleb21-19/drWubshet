@@ -2,10 +2,16 @@
 import { motion } from "framer-motion";
 
 const highlights = [
-  { label: "Specialization", value: "Diagnostic Pathology" },
-  { label: "Location", value: "Addis Ababa, Ethiopia" },
+  { label: "Specialization", value: "Anatomic Pathology" },
+  { label: "Current Position", value: "Assistant Professor, Bahir Dar University" },
   { label: "Experience", value: "10+ Years" },
-  { label: "Focus", value: "Precision Medicine" }
+  { label: "Focus", value: "Gynecologic & Oncopathology" }
+];
+
+const memberships = [
+  "Ethiopian Pathology Society - Founding Member & Executive Council",
+  "College of American Pathologists - International Fellow",
+  "Ethiopian Medical Association - Active Member"
 ];
 
 export default function About() {
@@ -40,21 +46,21 @@ export default function About() {
           >
             <div className="space-y-4 text-gray-600 leading-relaxed text-center lg:text-left">
               <p className="text-base md:text-lg">
-                Dr. Wubshet Assefa is a dedicated Specialist Pathologist with extensive experience 
-                in diagnostic pathology and laboratory medicine. Based in Addis Ababa, Ethiopia, 
-                Dr. Assefa is committed to providing accurate and timely diagnostic services.
+                Dr. Wubshet Assefa Tessema, M.D., is an Assistant Professor and Chief Anatomic Pathologist 
+                at Bahir Dar University, Ethiopia. With over a decade of experience in diagnostic pathology, 
+                he specializes in gynecologic pathology, oncopathology, and cytopathology.
               </p>
               
               <p>
-                With a focus on surgical pathology, cytopathology, and clinical consultation, 
-                Dr. Assefa works closely with clinical teams to ensure optimal patient care 
-                through precise diagnostic interpretation.
+                Dr. Assefa completed his medical degree at Haramaya University and specialized in 
+                Anatomic Pathology at Jimma University. He has established cytopathology services 
+                at multiple hospitals and co-founded histopathology laboratories.
               </p>
               
               <p>
-                Dr. Assefa&apos;s expertise encompasses modern diagnostic techniques and maintains 
-                the highest standards of medical practice, contributing to improved healthcare 
-                outcomes in the region.
+                As a founding member of the Ethiopian Pathology Society and an International Fellow 
+                of the College of American Pathologists, Dr. Assefa is recognized for his contributions 
+                to pathology education and research, with multiple peer-reviewed publications.
               </p>
             </div>
           </motion.div>

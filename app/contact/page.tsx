@@ -3,20 +3,21 @@ import { motion } from "framer-motion";
 import { MapPin, Mail, Building2, Send } from "lucide-react";
 import { useState, FormEvent } from "react";
 
-const EMAIL = "info@drwubshet.com";
+const EMAIL = "wubossassefa@yahoo.com";
 
 const contactInfo = [
-  { icon: MapPin, label: "Location", value: "Addis Ababa, Ethiopia" },
+  { icon: MapPin, label: "Location", value: "Bahir Dar, Ethiopia" },
   { icon: Mail, label: "Email", value: EMAIL },
   { icon: Building2, label: "Specialization", value: "Diagnostic Pathology" }
 ];
 
 const services = [
-  "Surgical Pathology Consultations",
-  "Cytopathology Evaluations",
-  "Clinical Laboratory Consultations",
-  "Second Opinion Services"
+  "Surgical pathology consultation",
+  "Cytopathology case evaluation",
+  "Clinical laboratory consultation",
+  "Second-opinion diagnostic review"
 ];
+
 
 export default function Contact() {
   const [formData, setFormData] = useState({

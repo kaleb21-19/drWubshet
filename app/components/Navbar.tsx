@@ -7,9 +7,10 @@ import { FiMenu, FiX } from "react-icons/fi";
 
 const navLinks = [
     { name: "Home", path: "#hero" },
-    { name: "About", path: "#about" },
     { name: "Services", path: "#services" },
     { name: "Experience", path: "#experience" },
+    { name: "Publications", path: "#publications" },
+    { name: "About", path: "#about" },
     { name: "Contact", path: "#contact" },
 ];
 

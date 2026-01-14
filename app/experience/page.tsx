@@ -4,22 +4,46 @@ import { FlaskConical } from "lucide-react";
 
 const experience = [
   {
-    year: "2018 - Present",
-    role: "Senior Pathologist",
-    location: "National Referral Hospital",
-    details: "Specializing in oncological histopathology and laboratory quality management."
+    year: "2023 - Present",
+    role: "Assistant Professor & Chief Anatomic Pathologist",
+    location: "Bahir Dar University",
+    details: "Leading anatomic pathology services with focus on gynecologic pathology and oncopathology.",
+    type: "Current"
+  },
+  {
+    year: "2017 - 2023",
+    role: "Assistant Professor & Head of Pathology Department",
+    location: "Debre Markos University",
+    details: "Initiated routine cytopathology and co-established histopathology laboratory at the Specialized University Hospital.",
+    type: "Academic"
+  },
+  {
+    year: "2018 - 2019",
+    role: "Assistant Professor, Pathology Unit",
+    location: "Adigrat University",
+    details: "Established cytopathology services at Adigrat General Hospital.",
+    type: "Academic"
+  },
+  {
+    year: "2014 - 2015",
+    role: "Lecturer, Health Science College",
+    location: "Adigrat University",
+    details: "Teaching medical students in pathology and laboratory medicine.",
+    type: "Teaching"
   },
   {
     year: "2015 - 2018",
-    role: "Clinical Researcher",
-    location: "Medical Research Institute",
-    details: "Focused on cytopathology and early detection patterns in cellular structures."
+    role: "Specialization in Anatomic Pathology",
+    location: "Jimma University",
+    details: "Post-graduate training in anatomic pathology with comprehensive clinical experience.",
+    type: "Training"
   },
   {
-    year: "2012 - 2015",
-    role: "Resident Pathologist",
-    location: "University Teaching Hospital",
-    details: "Comprehensive training in forensic and surgical pathology."
+    year: "2007 - 2013",
+    role: "Doctor of Medicine (MD)",
+    location: "Haramaya University",
+    details: "Medical degree with foundation in clinical medicine and diagnostics.",
+    type: "Education"
   }
 ];
 
@@ -65,7 +89,7 @@ export default function Experience() {
                   <div className="flex items-center justify-between gap-2 mb-3">
                     <time className="text-primary font-semibold text-sm">{item.year}</time>
                     <span className="text-xs font-medium px-3 py-1 bg-primary/5 text-primary rounded-full">
-                      Full-Time
+                      {item.type}
                     </span>
                   </div>
                   
