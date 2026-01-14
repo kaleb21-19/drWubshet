@@ -44,25 +44,29 @@ export default function About() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="lg:col-span-3 space-y-6"
           >
-            <div className="space-y-4 text-gray-600 leading-relaxed text-center lg:text-left">
-              <p className="text-base md:text-lg">
-                Dr. Wubshet Assefa Tessema, M.D., is an Assistant Professor and Chief Anatomic Pathologist 
-                at Bahir Dar University, Ethiopia. With over a decade of experience in diagnostic pathology, 
-                he specializes in gynecologic pathology, oncopathology, and cytopathology.
-              </p>
-              
-              <p>
-                Dr. Assefa completed his medical degree at Haramaya University and specialized in 
-                Anatomic Pathology at Jimma University. He has established cytopathology services 
-                at multiple hospitals and co-founded histopathology laboratories.
-              </p>
-              
-              <p>
-                As a founding member of the Ethiopian Pathology Society and an International Fellow 
-                of the College of American Pathologists, Dr. Assefa is recognized for his contributions 
-                to pathology education and research, with multiple peer-reviewed publications.
-              </p>
-            </div>
+           <div className="space-y-4 text-gray-600 leading-relaxed text-center lg:text-left">
+  <p className="text-base md:text-lg">
+    Dr. Wubshet Assefa Tessema, M.D., is an Assistant Professor and Chief Anatomic Pathologist 
+    at Bahir Dar University, Ethiopia. He has been actively involved in diagnostic pathology 
+    practice since 2015, providing comprehensive anatomic pathology services in academic 
+    and clinical settings.
+  </p>
+
+  <p>
+    Dr. Wubshet earned his Doctor of Medicine degree from Haramaya University and completed 
+    his specialization in Anatomic Pathology at Jimma University. His professional experience 
+    includes histopathology, cytopathology, hematopathology, and autopsy pathology, with a 
+    particular interest in gynecologic pathology and oncopathology.
+  </p>
+
+  <p>
+    He is a founding member and executive council member of the Ethiopian Pathology Society 
+    and an International Fellow of the College of American Pathologists. Dr. Wubshet has 
+    contributed to pathology education, service development, and research, with multiple 
+    peer-reviewed publications in international journals.
+  </p>
+</div>
+
           </motion.div>
 
           <motion.div 
