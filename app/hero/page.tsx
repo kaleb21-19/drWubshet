@@ -137,7 +137,7 @@ gynecologic pathology and oncopathology.
               className="flex flex-col sm:flex-row items-center gap-4 pt-2"
             >
               <motion.a
-                href="public/CV wube path 2016(1) (1).docx"
+                href="/CV wube path 2016(1) (1).docx"
                 download="CV wube path 2016(1) (1).docx"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
