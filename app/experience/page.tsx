@@ -79,13 +79,13 @@ export default function Experience() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.4, delay: index * 0.1, ease: "easeOut" as const }}
-                className="relative pl-10 md:pl-20 group"
+                className="relative pl-8 md:pl-20 group"
               >
                 <div className="absolute left-0 md:left-4 top-2 w-6 h-6 md:w-8 md:h-8 rounded-full bg-white border-2 border-primary/30 group-hover:border-primary group-hover:bg-primary/5 transition-all duration-300 flex items-center justify-center shadow-sm">
                   <FlaskConical className="w-3 h-3 md:w-4 md:h-4 text-primary" />
                 </div>
 
-                <div className="bg-gray-50 p-5 md:p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md hover:border-primary/20 transition-all duration-300">
+                <div className="bg-gray-50 p-4 md:p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md hover:border-primary/20 transition-all duration-300">
                   <div className="flex items-center justify-between gap-2 mb-3">
                     <time className="text-primary font-semibold text-sm">{item.year}</time>
                     <span className="text-xs font-medium px-3 py-1 bg-primary/5 text-primary rounded-full">

@@ -44,7 +44,7 @@ export default function About() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="lg:col-span-3 space-y-6"
           >
-           <div className="space-y-4 text-gray-600 leading-relaxed text-center lg:text-left">
+           <div className="space-y-4 text-gray-600 leading-relaxed text-left">
   <p className="text-base md:text-lg">
     Dr. Wubshet Assefa Tessema, M.D., is an Assistant Professor and Chief Anatomic Pathologist 
     at Bahir Dar University, Ethiopia. He has been actively involved in diagnostic pathology 
