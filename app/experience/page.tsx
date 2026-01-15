@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { FlaskConical } from "lucide-react";
 
 const experience = [
+
   {
     year: "2023 - Present",
     role: "Assistant Professor & Chief Anatomic Pathologist",

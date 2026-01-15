@@ -96,7 +96,7 @@ const skillVariants = (direction: "left" | "right"): Variants => ({
               <motion.img
                 animate={{ y: [0, -8, 0] }}
                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                src="/images/wub.jpg"
+                src="/images/w.png"
                 alt="Dr. Wubshet Assefa"
                 className="rounded-full w-64 h-64 md:w-80 md:h-80 object-cover ring-4 ring-white shadow-xl"
               />

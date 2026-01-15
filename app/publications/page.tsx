@@ -67,42 +67,66 @@ const publications = [
 
 export default function Publications() {
   return (
-    <section className="py-16 md:py-24 bg-gray-50">
-      <div className="max-w-5xl mx-auto px-6">
+    <section className="relative py-16 md:py-24">
+      {/* Professional background with gradient overlay */}
+      <div className="absolute inset-0 bg-linear-to-br from-slate-50 via-blue-50/30 to-teal-50/20" />
+      
+      {/* Subtle pattern overlay for texture */}
+      <div className="absolute inset-0 opacity-[0.03]">
+        <div className="h-full w-full" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%230f52ba' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+        }} />
+      </div>
+      
+      <div className="relative max-w-5xl mx-auto px-6">
         
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="mb-10 md:mb-16 text-center"
-        >
-          <p className="text-primary font-medium uppercase tracking-wide text-sm mb-2">
-            Research
+        {/* Header with professional background */}
+        <div className="relative mb-12 md:mb-20 text-center rounded-3xl overflow-hidden shadow-xl border border-gray-100">
+          <div 
+            className="absolute inset-0 bg-cover bg-center-top bg-no-repeat"
+            style={{ 
+              backgroundImage: "url('/images/unnamed.jpg')",
+              filter: "brightness(0.9) contrast(1.1)",
+              backgroundPosition: "center 40%"
+            }}
+          />
+          <div className="absolute inset-0 bg-linear-to-t from-slate-900/40 via-slate-900/20 to-slate-900/30" />
+          <div className="absolute inset-0 bg-linear-to-b from-black/30 via-transparent to-black/5" />
+          
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="relative py-16 md:py-20 px-8"
+          >
+          <p className="text-white font-medium uppercase tracking-wide text-sm mb-3 drop-shadow-lg">
+            Research & Publications
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-            Publications
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-lg">
+            Academic Publications
           </h2>
-          <div className="h-1 w-16 bg-primary mt-4 mx-auto rounded-full" />
+          <div className="h-1 w-20 bg-white mt-4 mx-auto rounded-full shadow-lg" />
           <a 
             href="https://orcid.org/0000-0002-5428-1624"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 mt-4 text-sm text-primary hover:underline"
+            className="inline-flex items-center gap-2 mt-6 px-4 py-2 bg-white/90 backdrop-blur-sm rounded-full text-sm font-medium text-slate-900 hover:bg-white transition-all duration-300 shadow-lg"
           >
             ORCID Profile
             <ExternalLink className="w-4 h-4" />
           </a>
-        </motion.div>
+          </motion.div>
+        </div>
 
         <div className="space-y-4">
           {publications.map((pub, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.4, delay: index * 0.05 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.6, delay: index * 0.08, ease: "easeOut" }}
               className="bg-white p-5 md:p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md hover:border-primary/20 transition-all duration-300 group"
             >
               <div className="flex gap-4">
